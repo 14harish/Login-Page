@@ -31,7 +31,19 @@ exp.post("/insert",function(req,res){
         res.redirect("/");
     })
 })
+exp.post("/sigin",function(req,res){
+    let sql=`select * from login.signup where Emailid=? and password=?`;
+    connect.query(sql,function(err,result){
+        if(err) throw err;
+        if(result>0){
+            res.send("Invalid");
+        }
+        else{
+            res.send("Valid");
+        }
+    })
+})
 
-exp.listen("3001",function(){
+exp.listen("3000",function(){
     console.log("Redy..");
 })
