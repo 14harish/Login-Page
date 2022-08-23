@@ -31,16 +31,20 @@ exp.post("/insert",function(req,res){
         res.redirect("/");
     })
 })
-exp.post("/sigin",function(req,res){
-    let sql=`select * from login.signup where Emailid=? and password=?`;
-    connect.query(sql,function(err,result){
-        if(err) throw err;
-        if(result>0){
-            res.send("Invalid");
-        }
-        else{
-            res.send("Valid");
-        }
+exp.post("/sigin/:password",function(req,res){
+    let password=req.body.password;
+   // let sql=`select * from login.signup where Emailid='$[req.body.email}' and password='$[req.body.password]'`;
+   let sql="select * from login.signup where password='$[password]'";
+   connect.query(sql,function(err,result){
+        if(err){ throw err;}
+       console.log(result);
+       res.send(result);
+        // if(result>0){
+        //     res.send("valid");
+        // }
+        // else{
+        //     res.send("Invalid");
+        // }
     })
 })
 
