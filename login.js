@@ -41,7 +41,7 @@ exp.post("/sigin",function(req,res){
        // console.log(req.body.password);
        console.log(result);
        //res.send(result);
-        if(result>0){
+        if(result.length>0){
             res.send("valid");
         }
         else{
