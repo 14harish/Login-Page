@@ -31,20 +31,22 @@ exp.post("/insert",function(req,res){
         res.redirect("/");
     })
 })
-exp.post("/sigin/:password",function(req,res){
+exp.post("/sigin",function(req,res){
     let password=req.body.password;
    // let sql=`select * from login.signup where Emailid='$[req.body.email}' and password='$[req.body.password]'`;
-   let sql="select * from login.signup where password='$[password]'";
+   let sql = `select * from login.signup where Emailid="${req.body.email}" and password="${req.body.password}"`;
+
    connect.query(sql,function(err,result){
         if(err){ throw err;}
+       // console.log(req.body.password);
        console.log(result);
-       res.send(result);
-        // if(result>0){
-        //     res.send("valid");
-        // }
-        // else{
-        //     res.send("Invalid");
-        // }
+       //res.send(result);
+        if(result>0){
+            res.send("valid");
+        }
+        else{
+            res.send("Invalid");
+        }
     })
 })
 
