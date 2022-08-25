@@ -37,15 +37,15 @@ exp.post("/sigin",function(req,res){
    let sql = `select * from login.signup where Emailid="${req.body.email}" and password="${req.body.password}"`;
 
    connect.query(sql,function(err,result){
-        if(err){ throw err;}
+    //    if(err){ throw err;}
        // console.log(req.body.password);
-       console.log(result);
+      // console.log(result);
        //res.send(result);
         if(result.length>0){
-            res.send("valid");
+            res.send("Sigin Succesfull");
         }
         else{
-            res.send("Invalid");
+            res.redirect("/");
         }
     })
 })
