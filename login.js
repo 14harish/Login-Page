@@ -39,13 +39,13 @@ exp.post("/sigin",function(req,res){
    connect.query(sql,function(err,result){
     //    if(err){ throw err;}
        // console.log(req.body.password);
-      // console.log(result);
+       console.log(result);
        //res.send(result);
         if(result.length>0){
             res.send("Sigin Succesfull");
         }
         else{
-            res.redirect("/");
+            res.send("Invalid Password Or EmailId");
         }
     })
 })
