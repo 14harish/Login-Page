@@ -4,61 +4,24 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="sigin.css">
-        <style>
-            *{
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            .cont{
-                height:100vh;
-                display:flex; 
-                align-items: center;
-                justify-content: center;
-                background-image: linear-gradient(to right,red,yellow);
-            }
-            .login{
-                background-color: white;
-                padding: 30px;
-                height: min-content;
-                width: 360px;
-                border-radius: 20px;
-            }
-            .login h3{
-                font-size: 30px;
-                margin-bottom: 30px;
-            }
-            .login form{
-                font-size: 20px;
-            }
-            .login form .form-group{
-                margin-bottom: 15px;
-            }
-            .login p{
-                margin-top: 25px;
-            }
-            .login a{
-                text-decoration: none;
-            }
-        </style>
     </head>
     <body>
-        <div class="cont">
-        <div class="login">
         <h3>Sigin Page</h3>
-        <form action="/sigin" method="post">
-            <div class="form-group">
-            <label class="form-label">EmailId</label>
-            <input type="email" class="form-control is valid" name="email" placeholder="harish@gmail.com" class="email">
+        <div class="log">
+        <form action="/sigin" method="post" >
+            <div class="form-field">
+            <!-- <label class="form-label">EmailId</label> -->
+            <input type="email"" name="email" class="email">
+            <label class="label">username</label>
             </div>
-            <div class="form-group">
-            <label class="form-label">Password</label>
-            <input type="password" class="form-control" name="password" placeholder="Password" class="password">
+            <div class="form-field">
+            <!-- <label class="form-label">Password</label> -->            
+            <input type="password" name="password"  class="password">
+            <label class="label">Password</label>
             </div>
             <input type="submit" class="btn btn-primary" value="Sigin"> 
         </form>
         <p>Create Account! <a href="signup.html">Signup</a></p>
     </div>
-</div>
     </body>
 </html>
