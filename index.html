@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,22 +7,26 @@
         <link rel="stylesheet" href="sigin.css">
     </head>
     <body>
-        <h3>Sigin Page</h3>
-        <div class="log">
-        <form action="/sigin" method="post" >
-            <div class="form-field">
+       
+        <div class="l-form">
+         <form action="/sigin" method="post" class="form" >
+            
+            <h3 class="form_title">Sigin Page</h3>
+            <div class="form_div">
             <!-- <label class="form-label">EmailId</label> -->
-            <input type="email"" name="email" class="email">
-            <label class="label">username</label>
+                <input type="email" name="email" class="form_input" class="email">
+                <label class="form_label">EmailId</label>
             </div>
-            <div class="form-field">
+            <div class="form_div">
             <!-- <label class="form-label">Password</label> -->            
-            <input type="password" name="password"  class="password">
-            <label class="label">Password</label>
+               <input type="password" name="password" class="form_input" class="password">
+               <label class="form_label">Password</label>
             </div>
-            <input type="submit" class="btn btn-primary" value="Sigin"> 
+            <input type="submit" class="form_button" value="Sigin"> 
+            <p>Create Account! <a href="signup.html">Signup</a></p>
         </form>
-        <p>Create Account! <a href="signup.html">Signup</a></p>
+      
     </div>
+    <script src="index.js"></script>
     </body>
 </html>
