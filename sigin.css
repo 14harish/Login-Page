@@ -39,7 +39,7 @@ body{
     width: 100%;
     height: 100%;
     border: 3px solid rgb(32, 166, 166) ;
-    border-radius: .5rem;
+    border-radius: .9rem;
     outline: none;
     padding: 1rem;
     background: none;
@@ -67,11 +67,15 @@ body{
 }
 .form_input:focus + .form_label{
   /* transform: translateY(-25px); */
-    left: -.5rem;
-    top: -.6rem;
+    left:1rem;
+    top:-.7rem;
     color: rgb(0, 0, 0);
     font-weight: 500;
     z-index: 10;
+}
+.form_input:focus + .form_label:after{
+    left: -.5rem;
+    top: -.6rem;
 }
 a{
     text-decoration: none   ;
