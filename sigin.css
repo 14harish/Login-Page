@@ -73,6 +73,9 @@ body{
     font-weight: 500;
     z-index: 10;
 }
+a{
+    text-decoration: none   ;
+}
 /* .form_input:placeholder-shown.form_input:not(:focus)+ .form_label{
     background-color: aliceblue;
       transform: translateY(-25px);
