@@ -11,10 +11,10 @@ let connect =sql.createConnection({
 exp.use(bodyparser.urlencoded({extended:true}));
 
 exp.get("/",function(req,res){
-    res.sendFile(__dirname+"/sigin.html");
+    res.sendFile(__dirname+"/index.html");
 })
-exp.get("/sigin.html",function(req,res){
-    res.sendFile(__dirname+"/sigin.html");
+exp.get("/index.html",function(req,res){
+    res.sendFile(__dirname+"/index.html");
 })
 exp.get("/signup.html",function(req,res){
     res.sendFile(__dirname+"/signup.html");
