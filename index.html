@@ -5,6 +5,90 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="sigin.css">
+        <style>
+            *,::before::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family:sans-serif;
+}
+.l-form{
+    background: linear-gradient(rgb(25, 9, 9),rgb(59, 59, 185));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form{
+    background-color: rgb(251, 250, 255);
+    width: 360px;
+    height: 25rem;
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 32px 5px rgb(9, 190, 236);
+}
+.form_title{
+    margin: 0;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+.form_div{
+    position: relative;
+    height: 48px;
+    margin-bottom: 1.5rem;
+}
+.form_input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgb(32, 166, 166) ;
+    border-radius: .9rem;
+    outline: none;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+}
+.form label{
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    padding: 0 0.5rem;
+    transition: 1.3s;
+    background-color: white;
+    /* background-color: rgb(74, 61, 61); */
+}
+.form_button{
+    display: block;
+    /* margin-left: auto; */
+    padding: .5rem 2rem;
+    outline: none;
+    border: none;
+    background-color: blue;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    color:  rgb(251, 250, 255);
+}
+.form_input:focus + .form_label{
+  /* transform: translateY(-25px); */
+    left:1rem;
+    top:-.7rem;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    z-index: 10;
+}
+.form_input:focus + .form_label:after{
+    left: -.5rem;
+    top: -.6rem;
+}
+a{
+    text-decoration: none   ;
+}
+        </style>
     </head>
     <body>
         <div class="l-form">
