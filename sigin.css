@@ -30,10 +30,10 @@ body{
 .form_div{
     position: relative;
     height: 48px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
 }
 .form_input{
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
@@ -45,18 +45,8 @@ body{
     background: none;
     z-index: 1;
 }
-.form label{
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-    padding: 0 0.5rem;
-    transition: 1.3s;
-    background-color: white;
-    /* background-color: rgb(74, 61, 61); */
-}
 .form_button{
     display: block;
-    /* margin-left: auto; */
     padding: .5rem 2rem;
     outline: none;
     border: none;
@@ -65,25 +55,7 @@ body{
     border-radius: 40px;
     color:  rgb(251, 250, 255);
 }
-.form_input:focus + .form_label{
-  /* transform: translateY(-25px); */
-    left:1rem;
-    top:-.7rem;
-    color: rgb(0, 0, 0);
-    font-weight: 500;
-    z-index: 10;
-}
-.form_input:focus + .form_label:after{
-    left: -.5rem;
-    top: -.6rem;
-}
+
 a{
     text-decoration: none   ;
 }
-/* .form_input:placeholder-shown.form_input:not(:focus)+ .form_label{
-    background-color: aliceblue;
-      transform: translateY(-25px);
-      transition: .2s;
-      z-index: 10;
-  
-} */
